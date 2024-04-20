@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Turbo.az.Entity;
+using Turbo.az.Entities;
 
 #nullable disable
 
 namespace Turbo.az.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240319120128_f")]
-    partial class f
+    [Migration("20240420084739_first")]
+    partial class first
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

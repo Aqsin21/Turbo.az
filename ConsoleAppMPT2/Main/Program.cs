@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.VisualBasic.FileIO;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
+using System.Text;
 using Turbo.az.Entities;
 using Turbo.az.Enums;
 using Turbo.az.Extensions;
@@ -23,20 +25,14 @@ namespace Turbo.Az.Main
         static void Main(string[] args)
         {
 
-            GetAllAnnouncements();
-            DeleteAnnouncement();
-            GetAllModels();
-            GetModelById();
-            EditModel();
-            DeleteModels();
-            AddNewModel();
-            EditMarka();
-            GetMarkaById();
-            DeleteMarka();
-            GetAllMarka();
-            AddNewMarka();
+            Console.OutputEncoding = Encoding.Unicode;
+            var ci = new CultureInfo("az");
+            Thread.CurrentThread.CurrentCulture = ci;
 
-            Helper.Print("Welcome to Turbo.Az!");
+            //-----------------------------------------------------------------------------------------------------------------
+
+            Helper.Print("WELCOME TURBO.AZ");
+
         l1:
             Enum menuOption = Helper.ChooseOption<MenuOptions>("Choose an Option: ");
             switch (menuOption)
